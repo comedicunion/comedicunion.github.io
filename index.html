@@ -5,40 +5,171 @@
         <link rel="icon" type="image/x-icon" href="https://comedicunion.github.io/images/favicon.png">
     </head>
     <body>
-        <style>
-            body{background-color: #222;}
-            img{filter: drop-shadow(5px 5px 5px #222);}
-            hr{color:white;margin-bottom:2%;}
+    <style>
+    body {
+        background-color: #222;
+    }
 
-            .main{width:75%;text-align:center;}
-            .top{width:100%;background-image: linear-gradient(0deg, #000000, #cc0000);}
-            .topnav{width:100%;background-image: linear-gradient(0deg, #000000, #222, #555);padding-top:0.5%;padding-bottom:0.5%;}
-            .content{background-color:#00000050;text-align:left;}
-            .heading{color:white;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:150%;padding:1%;text-align: left;}
-            .content button{margin-left:1%;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:112.5%;padding:0.25%;margin-bottom:0.5%;}
-            .thatcher{background-color: yellow;color:black;}
-            .leprechaun{background-color: green;color:white;}
-            .bigben{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:white;font-size: 112.5%;margin-left:1%;}
-            .bigben a{color:rgb(155, 125, 255);}
-            
-            .links a{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:150%;color:white;background-color:blueviolet;padding:1%;text-decoration:none;}
-            .links a:hover{background-color: rgb(55, 15, 92);}
-            .links .active{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:150%;color:white;background-color:rgba(0, 101, 184, 0.705);padding:1%;text-decoration:none;}
-            .links .active:hover{background-color:rgb(200, 0, 200);}
+    img {
+        filter: drop-shadow(5px 5px 5px #222);
+    }
 
-            .card {background-image:linear-gradient(0deg, #ffffff, #aaaaaa);padding:1%;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;width:75%;margin-left:12.5%;}
-            .post_img{width:17.5%;display: inline-block;}
-            .post_content{display: inline-block;vertical-align: top;margin-left:2%;}
-            .post_paragraph{font-size:105%;}
-            .by_whom{width:98%;background-image: linear-gradient(0deg, #000000, #222, #555);color:white;font-style:italic;margin-top:0px;padding:0.125%;}
+    hr {
+        color: white;
+        margin-bottom: 2%;
+    }
 
-            .youtube{background-color: #cc0000;text-decoration: none;color:white;padding:0.25%;} .youtube:hover{background-color:white;box-shadow:0px 0px 0px 1px #cc0000 inset;color:#cc0000;}
-            .ourpage{background-color: #000000;text-decoration: none;color:white;padding:0.25%;margin-right:1%;} .ourpage:hover{background-color:white;box-shadow:0px 0px 0px 1px black inset;color:black;}
+    .main {
+        width: 50%;
+        text-align: center;
+        box-sizing: border-box;
+    }
 
-            
-            }
+    @media (max-width: 768px) {
+        .main {
+            width: 90%;
+        }
+    }
 
-        </style>
+    .top {
+        width: 100%;
+        background-image: linear-gradient(0deg, #000000, #cc0000);
+    }
+
+    .topnav {
+        width: 100%;
+        background-image: linear-gradient(0deg, #000000, #222, #555);
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+    }
+
+    .content {
+        background-color: #00000050;
+        text-align: left;
+    }
+
+    .heading {
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 150%;
+        padding: 1%;
+        text-align: left;
+    }
+
+    .content button {
+        margin-left: 1%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 112.5%;
+        padding: 0.25%;
+        margin-bottom: 0.5%;
+    }
+
+    .thatcher {
+        background-color: yellow;
+        color: black;
+    }
+
+    .leprechaun {
+        background-color: green;
+        color: white;
+    }
+
+    .bigben {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 112.5%;
+        margin-left: 1%;
+    }
+
+    .bigben a {
+        color: rgb(155, 125, 255);
+    }
+
+    .links a {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 150%;
+        color: white;
+        background-color: blueviolet;
+        padding: 1%;
+        text-decoration: none;
+    }
+
+    .links a:hover {
+        background-color: rgb(55, 15, 92);
+    }
+
+    .links .active {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 150%;
+        color: white;
+        background-color: rgba(0, 101, 184, 0.705);
+        padding: 1%;
+        text-decoration: none;
+    }
+
+    .links .active:hover {
+        background-color: rgb(200, 0, 200);
+    }
+
+    .card {
+        background-image: linear-gradient(0deg, #ffffff, #aaaaaa);
+        padding: 1%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        width: 75%;
+        margin-left: 12.5%;
+    }
+
+    .post_img {
+        width: 17.5%;
+        display: inline-block;
+    }
+
+    .post_content {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 2%;
+    }
+
+    .post_paragraph {
+        font-size: 105%;
+    }
+
+    .by_whom {
+        width: 98%;
+        background-image: linear-gradient(0deg, #000000, #222, #555);
+        color: white;
+        font-style: italic;
+        margin-top: 0px;
+        padding: 0.125%;
+    }
+
+    .youtube {
+        background-color: #cc0000;
+        text-decoration: none;
+        color: white;
+        padding: 0.25%;
+    }
+
+    .youtube:hover {
+        background-color: white;
+        box-shadow: 0px 0px 0px 1px #cc0000 inset;
+        color: #cc0000;
+    }
+
+    .ourpage {
+        background-color: #000000;
+        text-decoration: none;
+        color: white;
+        padding: 0.25%;
+        margin-right: 1%;
+    }
+
+    .ourpage:hover {
+        background-color: white;
+        box-shadow: 0px 0px 0px 1px black inset;
+        color: black;
+    }
+</style>
         <center>
         <div class = "main">
             <div class = "top">
