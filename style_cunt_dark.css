@@ -145,5 +145,5 @@ color: #fff;
    .post {display:grid;}
    .post img{width:100%;max-width: 500px;margin:auto;}
     h5{position:absolute;top:0;left:0;}
-    .foot_txt{margin:1rem;margin:auto;}
+    .foot_txt{padding:1rem;margin:auto;}
   }
