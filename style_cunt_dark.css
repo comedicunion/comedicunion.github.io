@@ -141,7 +141,9 @@ color: #fff;
 @media (orientation: portrait) {
    #mydivheader, #mydiv {display:none;}
    .logo{width:100%;}
-   .main, footer{width:100%;margin:0;}
+   .main, footer{width:100%;margin:0px;margin:auto;padding:0px;}
    .post {display:grid;}
-   .post img{width:100%;max-width: 500px;}
+   .post img{width:100%;max-width: 500px;margin:auto;}
+    h5{position:sticky;top:0;left:0;}
+    footer{padding:1rem;margin:auto;}
   }
