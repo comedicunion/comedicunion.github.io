@@ -137,7 +137,7 @@ background-color: #cc0000;
 color: #fff;
 
 }
-.foot_txt{color:white;}
+footer{color:white;}
 @media (orientation: portrait) {
    #mydivheader, #mydiv {display:none;}
    .logo{width:100%;}
