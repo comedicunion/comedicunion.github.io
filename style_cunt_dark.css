@@ -138,6 +138,7 @@ color: #fff;
 
 }
 footer{color:white;}
+p footer{color:white;}
 @media (orientation: portrait) {
    #mydivheader, #mydiv {display:none;}
    .logo{width:100%;}
