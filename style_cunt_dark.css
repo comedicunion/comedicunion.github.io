@@ -139,7 +139,7 @@ color: #fff;
 }
 footer{color:white;}
 p footer{color:white;}
-.topmost, .div1, .div2{display:inline-block;vertical-align:text-top;margin:auto;width:45%;} .div2 a{background-color:#000d8a;color:white;text-decoration:none;}
+.topmost, .div1, .div2{display:inline-block;vertical-align:text-top;margin:auto;width:45%;} .acontact{background-color:#000d8a;color:white;text-decoration:none;}
 @media (orientation: portrait) {
    #mydivheader, #mydiv {display:none;}
    .logo{width:100%;}
