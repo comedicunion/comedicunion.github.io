@@ -139,7 +139,7 @@ color: #fff;
 }
 footer{color:white;}
 p footer{color:white;}
-.topmost{display:inline-box;}
+.topmost{display:inline;}
 @media (orientation: portrait) {
    #mydivheader, #mydiv {display:none;}
    .logo{width:100%;}
