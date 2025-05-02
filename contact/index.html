@@ -1,34 +1,46 @@
-<title>Contact Form</title>
-<link rel="icon" href="https://comedicunion.github.io/images/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="style_simple.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<div class = "topnav">
-    <a href = "/">Home</a>
-    <a href="/sketches/">Sketches</a>
-    <a href = "/gallery/">Gallery</a>
-    <a href = "/about/">About</a>
-</div>
-<div class = "main">
-    <div class = "ttl">
-    <h1 style="display:inline-block;">CUNT Productions</h1><h1 style="color:gray;display:inline-block;">&nbsp;Contact Form</h1>
-</div>
-    <form action="https://api.web3forms.com/submit" method="POST" style="display:inline-block;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="icon" href="https://comedicunion.github.io/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style_simple.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/sketches/">Sketches</a>
+        <a href="/gallery/">Gallery</a>
+        <a href="/about/">About</a>
+    </div>
 
-        <input type="hidden" name="access_key" value="87c614c5-12b9-47c6-86e0-5e9fd422e450">
+    <div class="main">
+        <div class="ttl">
+            <h1>CUNT Productions</h1><h1 class="gray-text">Contact Form</h1>
+        </div>
 
-        <label id="Name">Your Name, Please:</label><br>
-        <input type="text"id="name"name="name">
-        <br><br>
-        <label id="Coninfo">Your E-mail Or Telephone Number, Please:</label><br>
-        <input type="text" id="coninfo"name="contactinfo">
-        <br><br>
-        <label id="msg">Your Message, Please:</label><br>
-        <textarea id="msg" name="message"></textarea>
-        <br><br>
-        <input type="hidden" name="redirect" value="https://web3forms.com/success">
-        <button type="submit">Submit, Please</button>
-        <input type="hidden" name="apikey" value="87c614c5-12b9-47c6-86e0-5e9fd422e450">
-    </form>
-    <img src="kouneli.png" style="display:inline-block;width:15%;margin-left:2%;vertical-align:bottom;">
-    <h3>*Please note that there shouldn't be any safety concerns with the operation of this portal, please!</h3>
-</div>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <input type="hidden" name="access_key" value="87c614c5-12b9-47c6-86e0-5e9fd422e450">
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+            <label for="name">Your Name, Please:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="coninfo">Your E-mail Or Telephone Number, Please:</label><br>
+            <input type="email" id="coninfo" name="contactinfo" required><br><br>
+
+            <label for="msg">Your Message, Please:</label><br>
+            <textarea id="msg" name="message" required></textarea><br><br>
+
+            <button type="submit">Submit, Please</button>
+        </form>
+
+        <div class="image-container">
+            <img src="kouneli.png" alt="Image" class="responsive-image">
+        </div>
+
+        <h3 class="disclaimer">*Please note that there shouldn't be any safety concerns with the operation of this portal, please!</h3>
+    </div>
+</body>
+</html>
