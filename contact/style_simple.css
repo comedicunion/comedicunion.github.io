@@ -86,7 +86,7 @@ body {
 }
 
 .form-image {
-  display: block;
+  display: inline-block;
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -98,11 +98,11 @@ h3 {
   color: rgb(49, 0, 95);
   font-weight: normal;
   margin-top: 2rem;
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (orientation:portrait) {
   .topnav a {
     display: block;
     margin: 0.5rem auto;
@@ -118,19 +118,4 @@ h3 {
   }
 }
 
-@media (max-width: 480px) {
-  .contact-form input,
-  .contact-form textarea,
-  .contact-form button {
-    font-size: 0.9rem;
-    padding: 0.4rem;
-  }
 
-  .contact-form button {
-    padding: 0.4rem 0.8rem;
-  }
-
-  h3 {
-    font-size: 1.1rem;
-  }
-}
