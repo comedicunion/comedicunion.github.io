@@ -100,9 +100,9 @@
     padding:0.5rem;
     padding-top:1rem;
   }
-  button{
+  .buttt{
     background-color: #c900ae;
-    font-family:madetommy;
+    text-decoration:none;
     color:white;
     border:none;
     padding:0.5rem;
