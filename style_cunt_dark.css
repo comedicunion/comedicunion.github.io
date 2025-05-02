@@ -149,8 +149,3 @@ p footer{color:white;}
     h5{position:absolute;top:0;left:0;}
     .foot_txt{padding:1rem;margin:auto;}
   }
-@media (min-aspect-ratio: 11/7) {
-  body {
-    background-color: red;
-  }
-}
