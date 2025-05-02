@@ -1,0 +1,19 @@
+body{
+    background-color: bisque;
+    font-family:cursive;
+}
+.topnav{
+    background-color: blueviolet;
+    padding:0.5rem;
+}
+a{
+    color:white;
+    text-decoration: none;
+    border:solid;
+    border-color: white;
+    padding:0.125rem;
+}
+a:hover{
+    background-color:rgb(49, 0, 95);
+    border-color:blueviolet;
+}
