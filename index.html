@@ -55,17 +55,34 @@
             font-size: 0.85rem;
             padding: 0.5rem;
         }
+
+        /* Portrait Mode Styles */
+        @media screen and (orientation: portrait) {
+            .main {
+                padding-top: 2rem;
+                gap: 1rem;
+            }
+
+            .portrait-line {
+                width: 80%;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                margin: 0.5rem auto;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="main">
         <h1>Welcome to our website</h1>
+        <div class="portrait-line"></div>
         <img src="logo.png" alt="CUNT logo">
+        <div class="portrait-line"></div>
         <div>
             <a href="#">View Scripts</a>
             <a href="#">Gallery</a>
             <a href="#">About - Contact</a>
         </div>
+        <div class="portrait-line"></div>
     </div>
 
     <footer>
