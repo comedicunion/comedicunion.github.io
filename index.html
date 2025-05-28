@@ -1,59 +1,76 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CUNT::Home</title>
     <style>
         @font-face {
             font-family: bodyfont;
             src: url('BBCReith.ttf');
         }
-        body{
-            width:100%;
-            height:100dvh;
-            background-image:linear-gradient(0deg, #cc0000, #000000);
+
+        body {
+            margin: 0;
+            font-family: bodyfont, sans-serif;
+            color: white;
+            background: linear-gradient(0deg, #cc0000, #000000);
+            height: 100vh;
             overflow: hidden;
-            font-family:bodyfont;
-            color:white;
         }
-        .main{
-            width:100%;
-            height:100dvh;
-            overflow:hidden;
-            margin-top:30vh;
-            text-align:center;
-            font-family:bodyfont;
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
         }
-        img:hover ~ body{
-            background-image: linear-gradient(0deg, #456, #765);
+
+        img {
+            margin: 1rem 0;
         }
-        a{
-            background-image: linear-gradient(0deg, #242424, #6e6e6e);
-            padding:0.5rem;
+
+        a {
+            background: linear-gradient(0deg, #242424, #6e6e6e);
+            padding: 0.5rem 1rem;
             text-decoration: none;
-            color:white;
+            color: white;
             border-radius: 0.5rem;
-            font-size:1.125rem;
+            font-size: 1.125rem;
+            margin: 0.25rem;
+            display: inline-block;
+            transition: font-size 0.2s ease;
         }
-        a:hover{
-            transition: font-size 0.2s;
-            background-image: linear-gradient(0deg, #242424, #6e6e6e);
-            padding:0.5rem;
-            text-decoration: none;
-            color:white;
-            border-radius: 0.5rem;
-            font-size:1.275rem;
+
+        a:hover {
+            font-size: 1.275rem;
         }
-        h3{
-            position:absolute;
-            top:0px;
-            left:0px;
-            font-size:0.85rem;
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-size: 0.85rem;
+            padding: 0.5rem;
         }
     </style>
-    <h3>Copyright &copy; 2025 The Comedic Union of New Talents. All Rights Reserved.<br>Official CUNT&trade; Website.</h3>
+</head>
+<body>
     <div class="main">
         <h1>Welcome to our website</h1>
-        <img src ="logo.png"><br>
-        <a href = "">View Scripts</a>
-        <a href = "">Gallery</a>
-        <a href = "">About - Contact</a>
+        <img src="logo.png" alt="CUNT logo">
+        <div>
+            <a href="#">View Scripts</a>
+            <a href="#">Gallery</a>
+            <a href="#">About - Contact</a>
+        </div>
     </div>
+
+    <footer>
+        &copy; 2025 The Comedic Union of New Talents. All Rights Reserved.<br>
+        Official CUNT&trade; Website.
+    </footer>
+</body>
 </html>
