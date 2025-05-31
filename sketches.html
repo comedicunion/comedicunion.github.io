@@ -1,134 +1,261 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>CUNT::Sketches</title>
-    <link rel="icon" type="image/x-icon" href="https://cuntproductions.github.io/cuntproductions/img/favicons/favicon.png">
-  </head>
-  <body>
-    <style>
- @font-face {
-            font-family: bodyfont;
-            src: url('https://comedicunion.github.io/BBCReith.ttf');
-        }
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CUNT::Sketches</title>
+  <link rel="icon" type="image/x-icon" href="https://cuntproductions.github.io/cuntproductions/favicon.png">
+  <style>
+    @font-face {
+      font-family: bodyfont;
+      src: url('https://comedicunion.github.io/BBCReith.ttf');
+    }
 
-      body{background-color: #222;font-family:bodyfont !important;}
-      img{margin-top:1%;width:32.5%;filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 1));}
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: bodyfont, sans-serif;
+      background: linear-gradient(180deg, #000000, #8a0000);
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
 
+    .content-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
 
-      .topnav{background-image:linear-gradient(0deg, #000000, #555);padding:1%;text-align: center;margin-top:1%;overflow: hidden;}
-      .main{background-image:linear-gradient(180deg, #cc0000, #000000);width:75%;position:absolute;left:12.5%;margin-top:1%;padding-bottom:1%;}
-      .dir{position:fixed;top:0;left:0;color:white;text-align: left;}
-      .link, .active{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:white;text-decoration:none;background-color: rgb(0, 0, 0);padding:1%;box-shadow: #fff 1px 3px;}
-      .active{background-color:rgba(0, 101, 184, 0.705);}
-      .contents, .contents_small{color:white;font-family:bodyfont !important;font-size:x-large;margin:1%;}
-      .contents_small{font-size:large;}
-      .thatcher{color:black;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:x-large;margin:1%;padding:0.25%;}
+    .topnav {
+      background: #111;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
-      .link:hover{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:white;text-decoration:none;background-color: rgb(55, 15, 92);padding:1%;}
+    .logo {
+      height: 100px;
+    }
 
-      .sketch{width:75%;background-color: #00000060;text-align:left;font-family:bodyfont !important;}
-      .title, .format, .buttons, .buttons2, .authors, .year{display:inline-block;color:white;font-family:bodyfont !important;;margin-left:1%;font-weight: bold;}
-      .buttons{background-color:blanchedalmond;padding:1%;color:black;text-decoration:none;font-size:large;} .buttons:hover{background-color:#ffe260;color:black;}
-      .buttons2{background-color:blanchedalmond;padding:1%;color:black;text-decoration:none;font-size:large;} .buttons2:hover{background-color:#ffe260;color:black;}
-      .title{width:17.5vw;font-size:large;}
-      .format{width:4vw;} .authors{width:15vw;} .year{width:2.5vw;}
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
 
-      .thatcher{width:75%;background-image:linear-gradient(0deg, #000000, #555);display:flex;}
-      .image{display: block;width:22.5%;height:22.5%;margin:1%;} .txt{margin:0;color:white;font-size:xx-large;margin:1%;text-align: left;}
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      background-color: #000;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      box-shadow: #fff 1px 2px;
+    }
 
+    .nav-links a:hover {
+      background-color: #ff00ea;
+      color: #000;
+    }
 
-      @media only screen and (max-width: 600px) {
-      .main{width:97.5%;left:1.25%;}
-      img{width:82.5%;} 
-      .link,.active{font-size:4.5vw;}
-      .thatcher, .sketch{width:97.5%;} 
-      .image{width:42.5vw;} 
-      .txt{font-size:5vw;}
+    .main {
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+      gap: 2rem;
+    }
 
-      .title, .authors{width:57.5vw;}
-      .buttons, .buttons2{display:grid;margin-right:1%;} 
-      .buttons2{background-color:rgb(255, 213, 150)}
+    .sketch {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+      border-radius: 8px;
+      width: 280px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      text-align: left;
+    }
+
+    .sketch .icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .format {
+      font-style: italic;
+      margin: 0.5rem 0;
+    }
+
+    .button {
+      display: inline-block;
+      background: blanchedalmond;
+      color: black;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #ffe260;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #111;
+      font-size: 0.9rem;
+    }
+
+    .topnav2{display:none;}
+
+    @media (max-width: 600px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
       }
 
-      @media only screen and (min-width: 600px) and (max-width:1300px) {
-      .main{width:77.5%;left:11.25%;}
-      img{width:55.5%;} 
-      .link,.active{font-size:2vw;}
-      .thatcher, .sketch{width:82.5%;} 
-      .image{width:17.5vw;} 
-      .txt{font-size:2.5vw;}
+      .sketch {
+        width: 90%;
 
-      .title, .authors{width:22.5vw;}
-      .format{width:3.75vw;}
-      .buttons, .buttons2{display:inline-block;} 
+        
       }
-      #gap{width:1%;display: inline-block;}
-
-
-    </style>
-
-    
-
-    <div class = main>
-
-      <center>
-        <p class = "dir">© 2025 The Comedic Union of New Talents. All Rights Reserved.<br>
-Official CUNT™ Website. </p>
-        <img src = "https://comedicunion.github.io/logo.png">
-      </center>
-         <div class = "topnav">
-           <strong><a href = "/" class = "link">Home</a><div id="gap"></div><a href = "/gallery" class = "link">Gallery</a><div id="gap"></div><a href = "/abt-cnt" class = "link">About - Contact</a></strong>
-        </div>
-        <br>
-
-    <center>  
-        <!--<div class = "thatcher">
-        <img src = "thatcher.png" class = "image">
-        <p class = "txt">Our content was approved by Sir Margaret Thatcher himself.<br><br>Last update: 20/03/2025 by john</p>
-        </div><br>-->
-    
-        <div class = "sketch">
-            <p class = "title">→ Family Affairs (16/03)</p>
-            <p class = "format"><i>Play</i></p>
-            <a href = "" class = "buttons">Select</a>
-            <a href = "" class = "buttons2">View on YouTube</a>
-
-        </div><br>
-
-        <div class = "sketch">
-            <p class = "title">→ The Comedy of Errors</p>
-            <p class = "format"><i>Play</i></p>
-            <a href = "" class = "buttons">Select</a>
-            <a href = "" class = "buttons2">View on YouTube</a>
-  
-        </div><br>
-
-        <div class = "sketch">
-            <p class = "title">→ The Luftwaffles</p>
-            <p class = "format"><i>Sketch</i></p>
-            <a href = "" class = "buttons">Select</a>
-            <a href = "" class = "buttons2">View on YouTube</a>
-         
-        </div><br>
-
-        <div class = "sketch">
-            <p class = "title">→ The Case of Sir Erving MP</p>
-            <p class = "format"><i>Sketch</i></p>
-            <a href = "" class = "buttons">Select</a>
-            <a href = "" class = "buttons2">View on YouTube</a>
-    
-        </div><br>
-
-        <div class = "sketch">
-            <p class = "title">→ Big Bottle</p>
-            <p class = "format"><i>Sketch</i></p>
-            <a href = "" class = "buttons">Select</a>
-            <a href = "" class = "buttons2">View on YouTube</a>
+      .main {background-image: linear-gradient(0deg, #cc0000, #cc0000);}
+      .button{width:50%;text-align: center;}
+      /*
+      .topnav{display:grid;text-align: center;width:100vw;}
+      .topnav img{margin:auto;width:100vw;}
+      .nav-links{width:80vw;display: grid;margin-right:10vw;margin-left:10vw;}
       
-        </div><br>
+      body{overflow-x: hidden;}
+      .topnav img{width:100vw;height:30vw;margin: auto;}
+   
+     img{aspect-ratio:1 / 1;width:50%;height:50%;display:inline;}*/
+      .topnav{display:none;}
+      .topnav2{display:inline-block;}
+      .topnav2 .logo2{width:75%;margin-left:12.5%;}
+      .topnav2 a{color: white;
+      text-decoration: none;
+      background-color: #000;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      box-shadow: #fff 1px 2px; display:grid;width:75%;margin:auto;margin-bottom:1rem;}
+      .topnav2 a:hover{background-color: #ff00ea;
+      color: #000;}
+     
+    }
+  </style>
 
-    </center>
+  <style>
+    .banner{width:100%;border-radius: 8px;}
+    #ban1{background-image:linear-gradient(180deg, #0000cc, #000033);}
+    #ban2{background-image: url("roses.jpg");}
+    #ban3{background-image:linear-gradient(180deg, #cc0000, #330000);}
+    #ban4{background-image:url("brick.jpg");background-size: contain;}
+    #ban5{background-image:url("beer.jpg");background-size:cover;}
+    #ban6{background-image:linear-gradient(180deg, blanchedalmond, rgb(243, 181, 88));}
+    #ban7{background-image:linear-gradient(180deg, #0066ff, #000b70);}
+    #ban8{background-image:url("town.jpg");background-size: cover;}
+  </style>
+</head>
+<body>
 
+  <div class="content-wrapper">
 
-  </body>
+    <!-- Top Navigation -->
+    <div class="topnav">
+      <img src="https://comedicunion.github.io/logo.png" alt="CUNT logo" class="logo">
+      <div class="nav-links">
+        <a href="https://comedicunion.github.io">Home</a>
+        <a href="https://comedicunion.github.io/gallery">Gallery</a>
+        <a href="https://comedicunion.github.io/about-contact">About - Contact</a>
+      </div>
+    </div>
+    <div class="topnav2">
+      <img src="https://comedicunion.github.io/logo.png" alt="CUNT logo" class="logo2">
+      <div class="nav-links2">
+        <a href="https://comedicunion.github.io">Home</a>
+        <a href="https://comedicunion.github.io/gallery">Gallery</a>
+        <a href="https://comedicunion.github.io/about-contact">About - Contact</a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+      <div class="sketch">
+        <div class="icon"><img src = "banner1.png" class = "banner" id="ban1"></div>
+        <div class="title">The Comedy of Errors</div>
+        <div class="format">Play</div>
+        <a href="#" class="button">Select</a>
+      </div>
+
+       <div class="sketch">
+        <div class="icon"><img src = "banner2.png" class = "banner" id="ban2"></div>
+        <div class="title">Family Affairs</div>
+        <div class="format">Sketch</div>
+        <a href="#" class="button">Select</a>
+      </div>
+
+      <div class="sketch">
+        <div class="icon"><img src = "banner3.png" class = "banner" id="ban3"></div>
+        <div class="title">The Luftwaffles</div>
+        <div class="format">Sketch</div>
+        <a href="#" class="button">Select</a>
+      </div>
+
+      <div class="sketch">
+        <div class="icon"><img src = "banner4.png" class = "banner" id="ban4"></div>
+        <div class="title">The Case of Sir Erving MP</div>
+        <div class="format">Sketch</div>
+        <a href="#" class="button">Select</a>
+      </div>
+
+      <div class="sketch">
+        <div class="icon"><img src = "banner5.png" class = "banner" id="ban5"></div>
+        <div class="title">Big Bottle</div>
+        <div class="format">Sketch</div>
+        <a href="#" class="button">Select</a>
+      </div>
+
+      <div class="sketch">
+        <div class="icon"><img src = "banner6.png" class = "banner" id="ban6"></div>
+        <div class="title">"How to Eat Bread Formally"</div>
+        <div class="format">Sketch</div>
+        <a href="#" class="button">Select</a>
+      </div>
+
+      <div class="sketch">
+        <div class="icon"><img src = "banner7.png" class = "banner" id="ban7"></div>
+        <div class="title">Tory Party Cooking Show</div>
+        <div class="format">Sketch</div>
+        <a href="#" class="button">Select</a>
+      </div>
+
+      <div class="sketch">
+        <div class="icon"><img src = "banner8.png" class = "banner" id="ban8"></div>
+        <div class="title">British Town Names</div>
+        <div class="format">Sketch</div>
+        <a href="#" class="button">Select</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 The Comedic Union of New Talents. All Rights Reserved. <br>
+    Official CUNT™ Website.
+  </footer>
+
+</body>
 </html>
