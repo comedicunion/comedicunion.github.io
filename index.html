@@ -1,98 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CUNT::Home</title>
-    <style>
-        @font-face {
-            font-family: bodyfont;
-            src: url('BBCReith.ttf');
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CUNT::Home</title>
+  <link rel="icon" type="image/x-icon" href="https://cuntproductions.github.io/cuntproductions/favicon.png">
+  <style>
+    @font-face {
+      font-family: bodyfont;
+      src: url('https://comedicunion.github.io/BBCReith.ttf');
+    }
 
-        body {
-            margin: 0;
-            font-family: bodyfont, sans-serif;
-            color: white;
-            background: linear-gradient(0deg, #cc0000, #000000);
-            height: 100vh;
-        
-        }
+    body {
+      margin: 0;
+      font-family: bodyfont, sans-serif;
+      color: white;
+      background: linear-gradient(0deg, #cc0000, #000000);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
 
-        img {
-            margin: 1rem 0;
-        }
+    img {
+      margin: 1rem 0;
+      max-width: 90%;
+      height: auto;
+    }
 
-        a {
-            background-image: linear-gradient(0deg, #242424, #6e6e6e);
-            padding: 0.25rem 0.25rem;
-            text-decoration: none;
-            color: white;
-            border-radius: 0.5rem;
-            font-size: 1.2rem;
-            display: inline-block;
-            transition: background-image 0.2s ease;
-        }
+    a {
+      background-image: linear-gradient(0deg, #242424, #6e6e6e);
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: white;
+      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      display: inline-block;
+      margin: 0.5rem;
+    }
 
-        a:hover {
-            background-image: linear-gradient(0deg, #e0e0e0, #949494);
-            color:black;
-        }
+    a:hover {
+      background-image: linear-gradient(0deg, #e0e0e0, #949494);
+      color: black;
+    }
 
-        footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            font-size: 0.85rem;
-            padding: 0.5rem;
-        }
-        .stat{
-           /* position:fixed;*/
-        }
+    footer {
+      text-align: left;
+      font-size: 0.85rem;
+      padding: 1rem;
+      background: #00000000;
+    }
 
-        /* Portrait Mode Styles */
-        @media screen and (orientation: portrait) {
-            .main {
-                padding-top: 2rem;
-                gap: 1rem;
-            }
+    @media screen and (max-width: 600px) {
+      a {
+        font-size: 1rem;
+        padding: 0.5rem;
+        display:grid;
+        width:75vw;
+      }
 
-            .portrait-line {
-                width: 80%;
-                border: 1px solid rgba(255, 255, 255, 0.3);
-                margin: 0.5rem auto;
-            }
-        }
-    </style>
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="main">
-        <div class = "stat">
-        <h1>Welcome to our website</h1>
-        <div class="portrait-line"></div>
-        <img src="logo.png" alt="CUNT logo">
-        </div>
-        <div class="portrait-line"></div>
-        <div>
-            <a href="#">View Scripts</a>
-            <a href="#">Gallery</a>
-            <a href="#">About - Contact</a>
-        </div>
-        <div class="portrait-line"></div>
+  <div class="main">
+    <div class="stat">
+      <h1>Welcome to our website</h1>
+      <img src="https://comedicunion.github.io/logo.png" alt="CUNT logo" />
     </div>
 
-    <footer>
-        &copy; 2025 The Comedic Union of New Talents. All Rights Reserved.<br>
-        Official CUNT&trade; Website.
-    </footer>
+    <div>
+      <a href="https://comedicunion.github.io/sketches">View Scripts</a>
+      <a href="https://comedicunion.github.io/gallery">Gallery</a>
+      <a href="https://comedicunion.github.io/about-contact">About - Contact</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 The Comedic Union of New Talents. All Rights Reserved.<br>
+    Official CUNT&trade; Website.
+  </footer>
 </body>
 </html>
