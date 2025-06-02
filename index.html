@@ -12,15 +12,15 @@
     }
 
     html, body {
-      height: 100%; /* ✅ Ensures footer stays at bottom */
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: bodyfont, sans-serif;
+      background: linear-gradient(0deg, #cc0000, #000000);
+      color: white;
     }
 
     body {
-      margin: 0;
-      font-family: bodyfont, sans-serif;
-      color: white;
-      background: linear-gradient(0deg, #cc0000, #000000);
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
@@ -33,6 +33,7 @@
       justify-content: center;
       text-align: center;
       padding: 2rem;
+      padding-bottom: 4rem; /* Prevent footer from covering content */
     }
 
     img {
@@ -58,10 +59,15 @@
     }
 
     footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: white;
       text-align: left;
       font-size: 0.85rem;
       padding: 1rem;
-      background: #00000000;
+      z-index: 999;
     }
 
     @media screen and (max-width: 600px) {
