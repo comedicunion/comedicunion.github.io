@@ -6,28 +6,144 @@
   <title>Σύλλογος Φίλων Τζένης Βλάχου</title>
   <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Favicon.ico/64px-Favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      flex-direction: column;
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
 
+  body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #ff00cc, #3333ff);
+    color: #fff;
+  }
+
+  .sidebar {
+    width: 250px;
+    background: linear-gradient(to bottom, #ffcc00, #ff0066);
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 0 15px #ff00cc;
+  }
+
+  .sidebar h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.4em;
+    color: #000;
+  }
+
+  .menu-item {
+    padding: 15px 20px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 5px 10px;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+
+  .menu-item:hover {
+    background: rgba(0, 255, 255, 0.3);
+    color: #000;
+    transform: scale(1.05);
+  }
+
+  .submenu {
+    padding-left: 20px;
+    display: none;
+    list-style: none;
+  }
+
+  .submenu li a {
+    color: #fffb00;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+
+  .submenu li a:hover {
+    color: #00ffe7;
+    text-decoration: underline;
+  }
+
+  .header {
+    background: linear-gradient(to right, #00ffcc, #ff00cc);
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 0 15px #00ffff;
+  }
+
+  .header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header .logo img {
+    width: 50px;
+    height: 50px;
+    filter: hue-rotate(180deg);
+  }
+
+  .header .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px #000;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+  }
+
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+    background: linear-gradient(to right, #6600ff, #00ffff);
+    min-height: 100vh;
+    color: #000;
+  }
+
+  .big-title {
+    font-size: 2.8em;
+    text-align: center;
+    color: #fffb00;
+    text-shadow: 2px 2px 5px #ff00ff;
+  }
+
+  .footer {
+    margin-left: 250px;
+    background: linear-gradient(to right, #ff00ff, #00ffcc);
+    color: black;
+    padding: 15px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 -2px 10px #ff00cc;
+  }
+
+  .toggle-icon {
+    float: right;
+    transition: transform 0.3s;
+  }
+
+  .menu-item.open .toggle-icon {
+    transform: rotate(90deg);
+  }
+
+  @media (max-width: 768px) {
     .sidebar {
-      width: 250px;
-      background: #2c3e50;
-      color: white;
-      padding-top: 20px;
-      position: fixed;
-      height: 100%;
-      overflow-y: auto;
-      transition: transform 0.3s ease;
-      z-index: 1000;
-    }
-
-    .sidebar.hidden {
       transform: translateX(-100%);
     }
 
@@ -35,129 +151,17 @@
       transform: translateX(0);
     }
 
-    .sidebar h2 {
-      text-align: center;
-      margin-bottom: 1em;
-    }
-
-    .menu {
-      padding-left: 0;
-      list-style: none;
-    }
-
-    .menu-item {
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .menu-item:hover {
-      background: #34495e;
-    }
-
-    .submenu {
-      list-style: none;
-      padding-left: 20px;
-      display: none;
-    }
-
-    .submenu li {
-      padding: 5px 0;
-    }
-
-    .submenu li a {
-      color: #bdc3c7;
-      text-decoration: none;
-    }
-
-    .submenu li a:hover {
-      text-decoration: underline;
-    }
-
-    .header {
-      background: #34495e;
-      color: white;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    .header .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .header .logo img {
-      width: 40px;
-      height: 40px;
-    }
-
-    .header .title {
-      font-size: 1.2em;
-      font-weight: bold;
+    .content,
+    .footer {
+      margin-left: 0;
     }
 
     .hamburger {
-      display: none;
-      font-size: 1.5em;
-      cursor: pointer;
+      display: block;
     }
+  }
+</style>
 
-    .content {
-      margin-left: 250px;
-      padding: 20px;
-      flex: 1;
-    }
-
-    .footer {
-      margin-left: 250px;
-      background: #2c3e50;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      font-size: 0.9em;
-    }
-
-    .toggle-icon {
-      float: right;
-      transition: transform 0.3s;
-    }
-
-    .menu-item.open .toggle-icon {
-      transform: rotate(90deg);
-    }
-
-    .big-title {
-      font-size: 2.2em;
-      text-align: center;
-      margin: 1em 0;
-      color: #2c3e50;
-    }
-
-    @media (max-width: 768px) {
-      .sidebar {
-        transform: translateX(-100%);
-      }
-
-      .sidebar.show {
-        transform: translateX(0);
-      }
-
-      .content,
-      .footer {
-        margin-left: 0;
-      }
-
-      .hamburger {
-        display: block;
-      }
-    }
-  </style>
 </head>
 <body>
 
