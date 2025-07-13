@@ -68,7 +68,11 @@
       font-size: 0.85rem;
       padding: 1rem;
       z-index: 999;
+      background: rgba(0,0,0,0);
+      transition: opacity 0.3s ease;
     }
+
+smallheader{position:absolute;top:0;left:0;text-align:left;font-size: 0.85rem;display:block;}
 
     @media screen and (max-width: 600px) {
       a {
@@ -81,14 +85,17 @@
       h1 {
         font-size: 1.5rem;
       }
+	
     }
   </style>
 </head>
 <body>
   <div class="main">
+<smallheader id = "sml">© 2025 The Comedic Union of New Talents. All Rights Reserved.<br>
+Official CUNT™ Website.</smallheader>
     <div class="stat">
       <h1>Welcome to our website</h1>
-      <img src="https://comedicunion.github.io/logo.png" alt="CUNT logo" />
+      <img src="https://comedicunion.github.io/logo.png" alt="Comedic Union of New Talents Logo" />
     </div>
 
     <div>
@@ -98,10 +105,50 @@
     </div>
   </div>
 
-  <footer>
+  <footer id="siteFooter">
     &copy; 2025 The Comedic Union of New Talents. All Rights Reserved.<br>
     Official CUNT&trade; Website.<br>
-    <a href="https://info.flagcounter.com/ZA1x" style="padding:0px;margin:0px;background: none;"><img src="https://s01.flagcounter.com/count2/ZA1x/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+    <div id="flagCounter">
+      <a href="https://info.flagcounter.com/ZA1x" style="padding:0px;margin:0px;background: none;">
+        <img src="https://s01.flagcounter.com/count2/ZA1x/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" style="border:none;">
+      </a>
+    </div>
   </footer>
+
+  <script>
+    function checkOverlap() {
+      const links = document.querySelectorAll('.main a');
+      const footer = document.getElementById('siteFooter');
+	const smallheader = document.getElementById('sml');
+
+
+      let overlap = false;
+
+      links.forEach(link => {
+        const linkRect = link.getBoundingClientRect();
+        const footerRect = footer.getBoundingClientRect();
+
+        if (!(linkRect.right < footerRect.left ||
+              linkRect.left > footerRect.right ||
+              linkRect.bottom < footerRect.top ||
+              linkRect.top > footerRect.bottom)) {
+          overlap = true;
+        }
+      });
+
+      if (overlap) {
+        footer.style.pointerEvents = 'none';
+        footer.style.opacity = '0';
+	smallheader.style.opacity = '1';
+      } else {
+        footer.style.pointerEvents = 'auto';
+        footer.style.opacity = '1';
+	smallheader.style.opacity = '0';
+      }
+    }
+
+    window.addEventListener('load', checkOverlap);
+    window.addEventListener('resize', checkOverlap);
+  </script>
 </body>
 </html>
