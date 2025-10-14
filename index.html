@@ -38,7 +38,9 @@
 
     img {
       margin: 1rem 0;
-      max-width: 35%;
+      width: 35vw;
+      max-width: 500px;
+      min-width: 150px;
       height: auto;
     }
 
@@ -72,7 +74,14 @@
       transition: opacity 0.3s ease;
     }
 
-smallheader{position:absolute;top:0;left:0;text-align:left;font-size: 0.85rem;display:block;}
+    smallheader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: left;
+      font-size: 0.85rem;
+      display: block;
+    }
 
     @media screen and (max-width: 600px) {
       a {
@@ -85,14 +94,17 @@ smallheader{position:absolute;top:0;left:0;text-align:left;font-size: 0.85rem;di
       h1 {
         font-size: 1.5rem;
       }
-	
+
+      img {
+        width: 60vw;
+      }
     }
   </style>
 </head>
 <body>
   <div class="main">
-<smallheader id = "sml">© 2025 The Comedic Union of New Talents. All Rights Reserved.<br>
-Official CUNT™ Website.</smallheader>
+    <smallheader id="sml">© 2025 The Comedic Union of New Talents. All Rights Reserved.<br>
+    Official CUNT™ Website.</smallheader>
     <div class="stat">
       <h1>Welcome to our website</h1>
       <img src="https://comedicunion.github.io/logo.png" alt="Comedic Union of New Talents Logo" />
@@ -119,8 +131,7 @@ Official CUNT™ Website.</smallheader>
     function checkOverlap() {
       const links = document.querySelectorAll('.main a');
       const footer = document.getElementById('siteFooter');
-	const smallheader = document.getElementById('sml');
-
+      const smallheader = document.getElementById('sml');
 
       let overlap = false;
 
@@ -139,11 +150,11 @@ Official CUNT™ Website.</smallheader>
       if (overlap) {
         footer.style.pointerEvents = 'none';
         footer.style.opacity = '0';
-	smallheader.style.opacity = '1';
+        smallheader.style.opacity = '1';
       } else {
         footer.style.pointerEvents = 'auto';
         footer.style.opacity = '1';
-	smallheader.style.opacity = '0';
+        smallheader.style.opacity = '0';
       }
     }
 
