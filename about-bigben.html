@@ -28,6 +28,7 @@
       flex-direction: column;
     }
 
+    /* ---------- NAVIGATION ---------- */
     .topnav {
       background: #ffffd5;
       display: flex;
@@ -39,24 +40,22 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap; /* allow wrapping */
+      flex-wrap: wrap;
       width: 100%;
       max-width: 1200px;
       padding: 0 1rem;
     }
 
     .logo {
-      height: 100px;
+      height: 90px;
       margin-right: 1rem;
     }
 
     .nav-links {
       display: flex;
-      flex-wrap: nowrap;  /* prevent individual links from wrapping */
       gap: 1rem;
       font-family: Arial, sans-serif;
-      font-size: 1.05rem;
-      white-space: nowrap; /* keep each link on one line */
+      font-size: 1rem;
     }
 
     .nav-links a {
@@ -65,33 +64,57 @@
       background-color: #000;
       padding: 0.5rem 1rem;
       font-weight: bold;
+      border-radius: 4px;
+      transition: all 0.3s;
     }
 
     .nav-links a:hover {
-      text-decoration: underline;
+      background-color: #111;
+      color: #7bdfff;
     }
 
+    /* ---------- MAIN CONTENT ---------- */
     .main {
       flex-grow: 1;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
       gap: 2rem;
     }
 
     .sketch {
-      position: relative;
       width: 90%;
-      max-width: 1000px;
+      max-width: 900px;
       background-color: rgba(0, 0, 0, 0.5);
-      padding: 1rem;
+      padding: 1.5rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      border-radius: 10px;
+      box-sizing: border-box;
     }
 
     .title {
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: bold;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    /* All links unified */
+    a {
+      color: #7bdfff;
+      text-decoration: none;
+      transition: color 0.3s;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #a8e7ff;
     }
 
     .button {
@@ -102,137 +125,125 @@
       padding: 0.5rem 1rem;
       margin-top: 0.5rem;
       font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
     }
 
     .button:hover {
       background: #ffe260;
     }
 
-    #last {
-      margin-right: 1rem;
+    hr {
+      width: 100%;
+      margin: 2rem 0;
+      border: none;
+      border-top: 2px solid #fff;
     }
 
+    .abtlink {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .abtlink a {
+      background: black;
+      color: white;
+      font-weight: bold;
+      padding: 0.75rem 1.5rem;
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      border-radius: 6px;
+      transition: all 0.3s;
+      box-sizing: border-box;
+    }
+
+    .abtlink a:hover {
+      color: #7bdfff;
+      background: #111;
+    }
+
+    /* ---------- FOOTER ---------- */
     footer {
       text-align: center;
       padding: 1rem;
-      background: linear-gradient(180deg,  #ffffcc, #afb47b);
+      background: #ffffcc;
       font-size: 0.9rem;
-      color:black;
+      color: black;
     }
 
+    /* ---------- MOBILE NAV ---------- */
     .topnav2 {
       display: none;
       text-align: center;
-      background:#ffffd5;
+      background: #ffffd5;
+      padding-bottom: 1rem;
     }
 
     .topnav2 .logo2 {
-      width: 75%;
-      margin:auto;
-      margin-top:1rem; margin-bottom:1rem; 
+      width: 70%;
+      margin: 1rem auto;
+      border: 2px solid #993300;
+      display: block;
     }
 
     .topnav2 a {
       color: white;
       text-decoration: none;
       background-color: #000;
-      padding: 0.5rem 1rem;
+      padding: 0.75rem 1rem;
       font-weight: bold;
       display: block;
       width: 75%;
       margin: 0.5rem auto;
-      font-family: arial;
+      font-family: Arial, sans-serif;
+      border-radius: 4px;
+      transition: all 0.3s;
     }
 
     .topnav2 a:hover {
-      text-decoration: underline;
+      background: #111;
+      color: #7bdfff;
     }
 
-    form {
-      font-size: 1.25rem;
-    }
-
-    input, button, textarea {
-      font-family: bodyfont;
-      font-size: 1.25rem;
-      width: 30%;
-      min-width: 300px;
-    }
-
-    button {
-      background-color: transparent;
-      color: #fff;
-      padding: 0.5rem;
-      border: solid 1px #fff;
-      border-radius: 6px;
-    }
-
-    button:hover {
-      background-color: #ffffff55;
-    }
- p a{color:rgb(0, 183, 255);}
-    textarea {
-      max-width: 30%;
-      font-size: 1rem;
-    }
-
-    hr {
-      width: 90%;
-      float: left;
-    }
-
-    .abtlink {
-      display: grid;
-      width:100%;
-    }
-
-    .abtlink a {
-      padding: 0.5rem;
-      background:black;
-      margin-bottom: 1rem;
-      width: clamp(30%, calc(100vw * (30 / 1920)), 100%);
-      text-decoration: none;
-      color: white;;
-      font-weight: bold;
-    }
-
-    .abtlink a:hover {
-      color:white;
-      text-decoration: underline;
-    }
-
-    .logo2{
-      border: solid #993300 2px;
-    }
-
+    /* ---------- RESPONSIVE ---------- */
     @media (max-width: 850px) {
-      .topnav {
-        display: none;
+      .topnav { display: none; }
+      .topnav2 { display: block; }
+
+      .title {
+        font-size: 1.75rem;
       }
 
-      .topnav2 {
-        display: block;
-      }
-
-      .main {
-        background-image: linear-gradient(0deg, #993300, #993300);
-      }
-
-      .button {
-        width: 50%;
-        text-align: center;
-      }
-      .abtlink a{
-      width: clamp(30%, calc(100vw * (30 / 1920)), 100%);}
-    }
-
-    @media screen and (max-width: 1000px) {
-      .main {
-        background-image: #993300;
+      p {
+        font-size: 1rem;
       }
 
       .abtlink a {
-        width: clamp(30%, calc(100vw * (30 / 1920)), 100%);
+        width: 90%;
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .sketch {
+        padding: 1rem;
+      }
+
+      .title {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      .abtlink a {
+        width: 100%;
       }
     }
   </style>
@@ -241,7 +252,7 @@
 
   <div class="content-wrapper">
 
-    <!-- Top Navigation -->
+    <!-- Desktop Navigation -->
     <div class="topnav">
       <div class="topnav-inner">
         <a href="https://bigbenchania.gr"><img src="bigbenlogo.png" alt="Big Ben logo" class="logo"></a>
@@ -254,7 +265,6 @@
     <!-- Mobile Navigation -->
     <div class="topnav2">
       <img src="bigbenlogo.png" alt="Big Ben logo" class="logo2">
-
       <a href="https://comedicunion.github.io/about-contact">Back</a>
     </div>
 
@@ -262,10 +272,20 @@
     <div class="main">
       <div class="sketch">
         <div class="title">About Big Ben Language School</div>
-        <p id="par">Chania 73300 <br> I. Markaki 11, Nerokouros <br> pupilsatbigben@gmail.com <br> (0030) 28210 92150 <br> <a href="https://bigbenchania.gr">bigbenchania.gr</a><br><br>A huge "thank you" to Big Ben and specifically Mrs. Samantha Neal, for supporting, and essentially contributing in the founding of CUNT Productions. <br> <br>Big Ben is a remarkable language centre, with a huge reputation in Chania, stemming from the unique qualities of the school and its teachers. Big Ben has never failed, neither to educate, nor to shape its students into great people.</p>
 
+        <p>
+          Chania 73300 <br>
+          I. Markaki 11, Chania, PC 73300 <br>
+          <a href="mailto:pupilsatbigben@gmail.com">pupilsatbigben@gmail.com</a> <br>
+          (0030) 28210 92150 <br>
+          <a href="https://bigbenchania.gr">bigbenchania.gr</a>
+          <br><br>
+          A huge “thank you” to Big Ben and specifically Mrs. Samantha Neal, for supporting, and essentially contributing in the founding of CUNT Productions.
+          <br><br>
+          Big Ben is a remarkable language centre, with a huge reputation in Chania, stemming from the unique qualities of the school and its teachers. Big Ben has never failed, neither to educate, nor to shape its students into great people.
+        </p>
 
-        <br><hr><br><br>
+        <hr>
 
         <div class="abtlink">
           <a href="https://comedicunion.github.io/about-cunt">About CUNT Productions</a>
@@ -275,7 +295,9 @@
     </div>
   </div>
 
- 
+  <footer>
+    &copy; 2025 Big Ben Language School — All rights reserved.
+  </footer>
 
 </body>
 </html>
