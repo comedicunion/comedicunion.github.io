@@ -43,35 +43,52 @@
       flex-wrap: wrap;
       width: 100%;
       max-width: 1200px;
-      padding: 0 1rem;
+      padding: 0.75rem 1.5rem;
+      box-sizing: border-box;
     }
 
+    /* Desktop logo with inside stroke */
     .logo {
-      height: 90px;
-      margin-right: 1rem;
+      width: 260px;
+      height: auto;
+      aspect-ratio: 1000 / 310;
+      display: block;
+      box-sizing: border-box;
+      border: 2px solid #993300;
+      /* inset effect via outline */
+      outline: 2px solid #993300;
+      outline-offset: -2px;
     }
 
     .nav-links {
       display: flex;
       gap: 1rem;
-      font-family: Arial, sans-serif;
-      font-size: 1rem;
+      align-items: center;
     }
 
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      background-color: #000;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      border-radius: 4px;
-      transition: all 0.3s;
-    }
+    /* Desktop Back button with inside stroke */
+   .nav-links a {
+  color: white;
+  text-decoration: none;
+  background-color: #000;
+  padding: 0.75rem 1.25rem;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.3s;
+  display: inline-block;
+  width: 220px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0.25rem 0;
+  border: 2px solid black;        /* stroke color black */
+  outline: 2px solid black;       /* inside effect */
+  outline-offset: -2px;
+}
 
-    .nav-links a:hover {
-      background-color: #111;
-      color: #7bdfff;
-    }
+.nav-links a:hover {
+  background-color: #111;
+  color: #7bdfff;
+}
 
     /* ---------- MAIN CONTENT ---------- */
     .main {
@@ -117,22 +134,6 @@
       color: #a8e7ff;
     }
 
-    .button {
-      display: inline-block;
-      background: blanchedalmond;
-      color: black;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      margin-top: 0.5rem;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-
-    .button:hover {
-      background: #ffe260;
-    }
-
     hr {
       width: 100%;
       margin: 2rem 0;
@@ -160,6 +161,9 @@
       border-radius: 6px;
       transition: all 0.3s;
       box-sizing: border-box;
+      border: 2px solid #993300;
+      outline: 2px solid #993300;
+      outline-offset: -2px;
     }
 
     .abtlink a:hover {
@@ -185,24 +189,34 @@
     }
 
     .topnav2 .logo2 {
-      width: 70%;
-      margin: 1rem auto;
-      border: 2px solid #993300;
+      width: 85%;
+      aspect-ratio: 1000 / 310;
+      margin: 1rem auto 0.75rem auto;
       display: block;
+      border: 2px solid #993300;
+      outline: 2px solid #993300;
+      outline-offset: -2px;
+      box-sizing: border-box;
     }
 
     .topnav2 a {
       color: white;
       text-decoration: none;
       background-color: #000;
-      padding: 0.75rem 1rem;
+      padding: 0.85rem 1.25rem;
       font-weight: bold;
       display: block;
-      width: 75%;
-      margin: 0.5rem auto;
+      width: 85%;
+   
+      margin: 0.75rem auto 0;
       font-family: Arial, sans-serif;
-      border-radius: 4px;
+      border-radius: 6px;
       transition: all 0.3s;
+      text-align: center;
+      box-sizing: border-box;
+      border: 2px solid black;
+      outline: 2px solid black;
+      outline-offset: -2px;
     }
 
     .topnav2 a:hover {
@@ -211,40 +225,31 @@
     }
 
     /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1000px) {
+      .logo {
+        width: 220px;
+      }
+
+      .nav-links a {
+        width: 200px;
+      }
+    }
+
     @media (max-width: 850px) {
       .topnav { display: none; }
       .topnav2 { display: block; }
 
-      .title {
-        font-size: 1.75rem;
-      }
+      .title { font-size: 1.75rem; }
+      p { font-size: 1rem; }
 
-      p {
-        font-size: 1rem;
-      }
-
-      .abtlink a {
-        width: 90%;
-        max-width: none;
-      }
+      .abtlink a { width: 90%; max-width: none; }
     }
 
     @media (max-width: 500px) {
-      .sketch {
-        padding: 1rem;
-      }
-
-      .title {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 0.95rem;
-      }
-
-      .abtlink a {
-        width: 100%;
-      }
+      .sketch { padding: 1rem; }
+      .title { font-size: 1.5rem; }
+      p { font-size: 0.95rem; }
+      .abtlink a { width: 100%; }
     }
   </style>
 </head>
@@ -255,7 +260,9 @@
     <!-- Desktop Navigation -->
     <div class="topnav">
       <div class="topnav-inner">
-        <a href="https://bigbenchania.gr"><img src="bigbenlogo.png" alt="Big Ben logo" class="logo"></a>
+        <a href="https://bigbenchania.gr">
+          <img src="bigbenlogo.png" alt="Big Ben logo" class="logo">
+        </a>
         <div class="nav-links">
           <a href="https://comedicunion.github.io/about-contact" id="last">Back</a>
         </div>
@@ -275,7 +282,7 @@
 
         <p>
           Chania 73300 <br>
-          I. Markaki 11, Chania, PC 73300 <br>
+          I. Markaki 11, Nerokouros <br>
           <a href="mailto:pupilsatbigben@gmail.com">pupilsatbigben@gmail.com</a> <br>
           (0030) 28210 92150 <br>
           <a href="https://bigbenchania.gr">bigbenchania.gr</a>
